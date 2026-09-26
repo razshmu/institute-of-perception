@@ -148,3 +148,8 @@ a.chip:hover { border-color: var(--uv); }
 .timeline .when { font: 700 .72rem/1.4 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
 .timeline p { margin: .2rem 0 0; }
 .case.feature { border-top: 3px solid var(--uv); }
+
+.person img.round { border-radius: 50%; aspect-ratio: 1; max-width: 220px; }
+.partner-mini { display: flex; gap: .9rem; align-items: center; margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.partner-mini img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex: none; }
+.partner-mini p { margin: 0; font-size: 1rem; line-height: 1.45; }

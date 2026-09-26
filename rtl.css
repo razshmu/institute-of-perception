@@ -1,10 +1,19 @@
 /* Hebrew (RTL) adjustments */
 [dir="rtl"] {
-  --serif: "Frank Ruhl Libre", "David CLM", "Times New Roman", serif;
-  --sans: "Heebo", "Assistant", system-ui, "Segoe UI", sans-serif;
+  --serif: "Assistant", "Heebo", system-ui, "Segoe UI", sans-serif;
+  --sans: "Assistant", "Heebo", system-ui, "Segoe UI", sans-serif;
+  --display: "Frank Ruhl Libre", "David CLM", "Times New Roman", serif;
 }
-[dir="rtl"] body { font-size: 1.14rem; line-height: 1.75; }
-[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3 { letter-spacing: 0; line-height: 1.22; font-weight: 500; }
+[dir="rtl"] body { font-size: 1.2rem; line-height: 1.85; font-weight: 400; color: var(--ink); }
+[dir="rtl"] p { max-width: 38em; }
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] .brand-name, [dir="rtl"] .thesis-card .insight,
+[dir="rtl"] .director blockquote, [dir="rtl"] .claim-title { font-family: var(--display); letter-spacing: 0; line-height: 1.3; font-weight: 500; }
+[dir="rtl"] h1 { font-weight: 700; }
+[dir="rtl"] .lede { font-size: clamp(1.22rem, 1.1rem + .4vw, 1.4rem); line-height: 1.8; color: var(--ink-2); }
+[dir="rtl"] .chapter { font-size: 1.22rem; line-height: 1.9; }
+[dir="rtl"] .chapter h2 { font-size: 1.7rem; }
+[dir="rtl"] .thesis-card .tt.lay { font-size: .98rem; line-height: 1.6; color: var(--ink-2); }
+[dir="rtl"] .director blockquote { font-size: clamp(1.3rem, 1.15rem + .6vw, 1.65rem); line-height: 1.6; }
 [dir="rtl"] h1 em, [dir="rtl"] em { font-style: normal; }
 [dir="rtl"] .kicker, [dir="rtl"] .label, [dir="rtl"] .section-title, [dir="rtl"] .fields dt,
 [dir="rtl"] .test .field, [dir="rtl"] .thesis-card .tn, [dir="rtl"] .timeline .when,
@@ -29,8 +38,16 @@
 
 /* diagrams and figures keep their own left-to-right geometry */
 .diagram { direction: ltr; unicode-bidi: isolate; }
-[dir="rtl"] .diagram text { font-family: "Heebo", "Inter", sans-serif; }
+[dir="rtl"] .diagram text { font-family: "Assistant", "Inter", sans-serif; }
 
 /* language switch */
 .lang-switch { border: 1px solid var(--line) !important; border-radius: 999px; padding: .35rem .7rem !important; }
 .lang-switch:hover { border-color: var(--uv) !important; }
+
+/* glossary (Hebrew home) */
+.glossary-band { padding-top: 0 !important; }
+.glossary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.gloss-item { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--uv); border-radius: var(--radius); padding: 1.2rem 1.4rem; }
+.gloss-item h3 { font-size: 1.5rem; margin-bottom: .3rem; }
+.gloss-item p { margin: 0; font-size: 1.05rem; line-height: 1.7; }
+@media (max-width: 900px) { .glossary { grid-template-columns: 1fr; } }
