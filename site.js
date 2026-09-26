@@ -76,3 +76,25 @@
   tip.addEventListener("mouseleave", function () { hide(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") tip.hidden = true; });
 })();
+
+// Organism view toggle: remembers the reader's choice.
+(function () {
+  var btn = document.querySelector(".vision-toggle");
+  var key = "iop-human-view";
+  var apply = function (human) {
+    document.body.classList.toggle("as-human", human);
+    if (btn) {
+      btn.setAttribute("aria-pressed", human ? "true" : "false");
+      btn.textContent = human ? btn.dataset.animal : btn.dataset.human;
+    }
+  };
+  var saved = false;
+  try { saved = localStorage.getItem(key) === "1"; } catch (e) {}
+  apply(saved);
+  if (!btn) return;
+  btn.addEventListener("click", function () {
+    var human = !document.body.classList.contains("as-human");
+    apply(human);
+    try { localStorage.setItem(key, human ? "1" : "0"); } catch (e) {}
+  });
+})();

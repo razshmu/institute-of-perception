@@ -1,0 +1,46 @@
+/* Every page through another organism's eyes */
+body { --va: var(--uv); --vb: var(--cyan); }
+body:not(.as-human) { --uv: var(--va); --cyan: var(--vb); --accent: color-mix(in srgb, var(--va) 82%, var(--ink)); }
+
+/* the vision band: same place, same form, on every page */
+.vision-band { border-bottom: 1px solid var(--line); background: linear-gradient(90deg, color-mix(in srgb, var(--va) 7%, var(--bg)), color-mix(in srgb, var(--vb) 7%, var(--bg))); }
+.vision-inner { display: grid; grid-template-columns: auto 1fr auto; gap: 1.1rem; align-items: center; padding: .9rem 0; }
+.vision-emblem { width: 66px; height: 66px; border-radius: 50%; display: grid; place-items: center; color: var(--ink);
+  background: var(--surface); box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--va), 0 0 0 6px var(--vb); }
+.vision-emblem .animal { width: 44px; height: 44px; }
+.vision-text { min-width: 0; }
+.vision-title { margin: 0; font: 500 1.18rem/1.25 var(--display, var(--serif)); color: var(--ink); }
+.vision-title .lbl { font: 600 .72rem/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: .3rem; }
+.vision-title strong { font-weight: 600; background: linear-gradient(90deg, var(--va), var(--vb)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.vision-fact { margin: .2rem 0 0; font: .9rem/1.45 var(--sans); color: var(--ink-2); max-width: none; }
+.vision-fact .note { color: var(--muted); font-size: .8rem; }
+.vision-toggle { font: 600 .82rem/1 var(--sans); padding: .6rem .95rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; white-space: nowrap; }
+.vision-toggle:hover { border-color: var(--va); }
+.vision-toggle:focus-visible { outline: 2px solid var(--va); outline-offset: 2px; }
+body.as-human .vision-emblem { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--line); }
+body.as-human .vision-title strong { background: none; color: var(--ink); }
+[dir="rtl"] .vision-title .lbl { letter-spacing: 0; font-size: .8rem; }
+@media (max-width: 700px) {
+  .vision-inner { grid-template-columns: auto 1fr; }
+  .vision-toggle { grid-column: 1 / -1; justify-self: start; }
+  .vision-emblem { width: 46px; height: 46px; }
+  .vision-emblem .animal { width: 28px; height: 28px; }
+}
+
+/* image rendering per organism (illustrative); text is never filtered */
+main img { transition: filter .6s ease; }
+body[data-vision="bee"]:not(.as-human) main img:not(.keep) { filter: url(#v-bee); }
+body[data-vision="viper"]:not(.as-human) main img:not(.keep) { filter: url(#v-viper); }
+body[data-vision="dog"]:not(.as-human) main img:not(.keep) { filter: url(#v-dog); }
+body[data-vision="mantis"]:not(.as-human) main img:not(.keep) { filter: url(#v-mantis) saturate(1.4); }
+body[data-vision="owl"]:not(.as-human) main img:not(.keep) { filter: grayscale(.85) brightness(.82) contrast(1.1) sepia(.15) hue-rotate(180deg) blur(.3px); }
+body[data-vision="bird"]:not(.as-human) main img:not(.keep) { filter: saturate(1.6) hue-rotate(-14deg) contrast(1.06); }
+body[data-vision="cuttlefish"]:not(.as-human) main img:not(.keep) { filter: grayscale(1) contrast(1.35); }
+body[data-vision="fly"]:not(.as-human) main img:not(.keep) { filter: blur(1.4px) saturate(1.2); }
+body[data-vision="fly"]:not(.as-human) :is(.media, .root-thread .fig, .hero .fig) { position: relative; }
+body[data-vision="fly"]:not(.as-human) :is(.media, .root-thread .fig)::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .38; border-radius: inherit;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='48.5' viewBox='0 0 28 48.5'%3E%3Cpath d='M14 0l14 8.08v16.17L14 32.33 0 24.25V8.08z M14 32.33l14 8.08V48.5 M14 32.33L0 40.41V48.5' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E"); background-size: 18px 31px; }
+/* these always stay as they are */
+.compare img, .founder img, .person img, .chapter .figure img, .diagram { filter: none !important; }
+@media (prefers-reduced-motion: reduce) { main img { transition: none; } }
