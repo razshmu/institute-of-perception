@@ -1,0 +1,36 @@
+/* Hebrew (RTL) adjustments */
+[dir="rtl"] {
+  --serif: "Frank Ruhl Libre", "David CLM", "Times New Roman", serif;
+  --sans: "Heebo", "Assistant", system-ui, "Segoe UI", sans-serif;
+}
+[dir="rtl"] body { font-size: 1.14rem; line-height: 1.75; }
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3 { letter-spacing: 0; line-height: 1.22; font-weight: 500; }
+[dir="rtl"] h1 em, [dir="rtl"] em { font-style: normal; }
+[dir="rtl"] .kicker, [dir="rtl"] .label, [dir="rtl"] .section-title, [dir="rtl"] .fields dt,
+[dir="rtl"] .test .field, [dir="rtl"] .thesis-card .tn, [dir="rtl"] .timeline .when,
+[dir="rtl"] .toc-part h2, [dir="rtl"] .side-grid h2, [dir="rtl"] .pager a span { letter-spacing: 0; font-size: .82rem; }
+[dir="rtl"] .brand-name { font-weight: 500; }
+[dir="rtl"] .chapter > p:first-of-type::first-line { font-variant: normal; letter-spacing: 0; }
+
+/* logical directions */
+[dir="rtl"] .statement { border-left: 1px solid var(--line); border-right: 4px solid var(--uv); border-radius: var(--radius) 6px 6px var(--radius); }
+[dir="rtl"] .timeline { border-left: 0; border-right: 2px solid var(--line); }
+[dir="rtl"] .timeline li { padding: 0 1.4rem 1.4rem 0; }
+[dir="rtl"] .timeline li::before { left: auto; right: -7px; }
+[dir="rtl"] .ticks li { padding: .55rem 1.8rem .55rem 0; }
+[dir="rtl"] .ticks li::before { left: auto; right: 0; }
+[dir="rtl"] .steps li { padding: .8rem 2.6rem .8rem 0; }
+[dir="rtl"] .steps li::before { left: auto; right: 0; }
+[dir="rtl"] .chapter blockquote { border-left: 0; padding-left: 0; border-right: 3px solid var(--line); padding-right: 1.2rem; }
+[dir="rtl"] .hero-move { border-left: 0; padding-left: 0; border-right: 3px solid var(--uv); padding-right: 1.2rem; }
+[dir="rtl"] .pager .next { text-align: left; }
+[dir="rtl"] .cls { margin-left: 0; margin-right: .35rem; }
+[dir="rtl"] .claim-list[dir="ltr"] .cls { margin-left: .35rem; margin-right: 0; }
+
+/* diagrams and figures keep their own left-to-right geometry */
+.diagram { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] .diagram text { font-family: "Heebo", "Inter", sans-serif; }
+
+/* language switch */
+.lang-switch { border: 1px solid var(--line) !important; border-radius: 999px; padding: .35rem .7rem !important; }
+.lang-switch:hover { border-color: var(--uv) !important; }

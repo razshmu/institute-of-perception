@@ -37,8 +37,8 @@ img { max-width: 100%; display: block; }
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 a:hover { color: var(--uv); }
 :focus-visible { outline: 2px solid var(--uv); outline-offset: 3px; border-radius: 3px; }
-.skip { position: absolute; left: -999px; top: 0; background: var(--surface); padding: .6rem 1rem; z-index: 20; }
-.skip:focus { left: 1rem; }
+.skip { position: absolute; top: 0; inset-inline-start: 1rem; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; background: var(--surface); z-index: 20; }
+.skip:focus { width: auto; height: auto; clip-path: none; padding: .6rem 1rem; }
 
 .wrap { width: min(var(--wide), 100% - 2.5rem); margin-inline: auto; }
 .narrow { width: min(var(--measure), 100% - 2.5rem); margin-inline: auto; }
