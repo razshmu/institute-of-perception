@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://razshmu.github.io/institute-of-perception/sitemap.xml

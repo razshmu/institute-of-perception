@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html data-base="/institute-of-perception" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Access-Path Audit · Institute of Perception</title>
+<meta name="description" content="We study how the receiver — an animal, an instrument, a scientist — shapes what can be known, and we publish every claim with the test that could refute it.">
+<link rel="canonical" href="https://razshmu.github.io/institute-of-perception/access-path-audit/">
+<meta property="og:site_name" content="Institute of Perception">
+<meta property="og:title" content="The Access-Path Audit">
+<meta property="og:description" content="We study how the receiver — an animal, an instrument, a scientist — shapes what can be known, and we publish every claim with the test that could refute it.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://razshmu.github.io/institute-of-perception/og.png">
+<meta name="theme-color" content="#14171f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/institute-of-perception/site.css">
+<link rel="stylesheet" href="/institute-of-perception/pages.css">
+<link rel="icon" href="/institute-of-perception/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ResearchOrganization", "description": "We study how the receiver \u2014 an animal, an instrument, a scientist \u2014 shapes what can be known, and we publish every claim with the test that could refute it.", "founder": {"@type": "Person", "jobTitle": "Founder and Director", "name": "Shmuel Raz"}, "name": "Institute of Perception", "url": "https://razshmu.github.io/institute-of-perception/"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="/institute-of-perception/" aria-label="Institute of Perception, home"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="mark-band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="var(--uv)"/>
+      <stop offset="1" stop-color="var(--cyan)"/>
+    </linearGradient>
+  </defs>
+  <path d="M3 20 C 11 8, 29 8, 37 20 C 29 32, 11 32, 3 20 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+  <circle cx="20" cy="20" r="7.2" fill="url(#mark-band)"/>
+  <rect x="18.6" y="12.8" width="2.8" height="14.4" rx="1.4" fill="var(--bg)"/>
+</svg><span class="brand-name">Institute of Perception</span></a>
+    <nav aria-label="Main">
+<a href="/institute-of-perception/research/">Research</a><a href="/institute-of-perception/access-path-audit/" aria-current="page">The Audit</a><a href="/institute-of-perception/read/">Read</a><a href="/institute-of-perception/young-minds/">Young Minds</a><a href="/institute-of-perception/publications/">Publications</a><a href="/institute-of-perception/people/">People</a><a href="/institute-of-perception/collaborate/">Collaborate</a>    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <p class="kicker band">The method</p>
+    <h1>The Access-Path Audit</h1>
+    <p class="lede">A result can be real and still not show what the claim says. The audit follows a claim back along the path that produced it, and returns the strongest claim the evidence actually supports.</p>
+    <p class="small">It applies to an experiment, a published paper, a diagnostic algorithm, or a start-up's central claim. It is Thesis 11 of the programme, argued in <a href="/institute-of-perception/read/12-auditing-a-claim-along-the-path-it-travelled/">Chapter 12. Auditing a claim along the path it travelled</a>.</p>
+  </div>
+</section>
+
+<section class="block sunk">
+  <div class="wrap stepper">
+    <div class="stepper-fig">
+      <figure class="fig method-fig sticky"><svg class="diagram access-path" data-stepper viewBox="0 0 960 400" role="img" aria-labelledby="ap-audit-title ap-audit-desc">
+  <title id="ap-audit-title">The access path of a claim</title>
+  <desc id="ap-audit-desc">A claim is about a target. The target reaches the result only through a route of instruments and decisions, which yields a reproducible product. A rival artifact route can yield the same product without the target. The claim is made from the product, and the step from product to claim is where overinterpretation enters. The audit returns the strongest residual claim the evidence licenses.</desc>
+  <defs>
+    <marker id="ap-audit-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+    <marker id="ap-audit-arrow-rival" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="var(--rival)"/>
+    </marker>
+    <linearGradient id="ap-audit-band" x1="0" x2="1">
+      <stop offset="0" stop-color="var(--uv)"/><stop offset="1" stop-color="var(--cyan)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- main chain -->
+  <g class="ap-step" data-step="1">
+    <rect x="20" y="70" width="170" height="92" rx="12" class="node"/>
+    <text x="105" y="104" class="n-kicker">1 · TARGET</text>
+    <text x="105" y="130" class="n-label">What the claim</text>
+    <text x="105" y="150" class="n-label">is about</text>
+  </g>
+  <g class="ap-step" data-step="2">
+    <rect x="265" y="70" width="170" height="92" rx="12" class="node"/>
+    <text x="350" y="104" class="n-kicker">2 · ROUTE</text>
+    <text x="350" y="130" class="n-label">Instruments and</text>
+    <text x="350" y="150" class="n-label">decisions</text>
+  </g>
+  <g class="ap-step" data-step="3">
+    <rect x="510" y="70" width="170" height="92" rx="12" class="node"/>
+    <text x="595" y="104" class="n-kicker">3 · PRODUCT</text>
+    <text x="595" y="130" class="n-label">A reproducible</text>
+    <text x="595" y="150" class="n-label">result</text>
+  </g>
+  <g class="ap-step" data-step="4">
+    <rect x="755" y="70" width="185" height="92" rx="12" class="node node-claim"/>
+    <text x="847" y="104" class="n-kicker">4 · CLAIM</text>
+    <text x="847" y="130" class="n-label">What is said</text>
+    <text x="847" y="150" class="n-label">about the target</text>
+  </g>
+
+  <g class="edges" color="var(--ink)">
+    <line x1="192" y1="116" x2="261" y2="116" class="edge" marker-end="url(#ap-audit-arrow)"/>
+    <line x1="437" y1="116" x2="506" y2="116" class="edge" marker-end="url(#ap-audit-arrow)"/>
+  </g>
+
+  <!-- the gap: product to claim -->
+  <g class="ap-step" data-step="4">
+    <line x1="682" y1="116" x2="751" y2="116" class="edge edge-gap" marker-end="url(#ap-audit-arrow)" color="var(--ink)"/>
+    <rect x="684" y="30" width="66" height="26" rx="13" fill="url(#ap-audit-band)"/>
+    <text x="717" y="48" class="gap-label">the gap</text>
+  </g>
+
+  <!-- rival artifact route -->
+  <g class="ap-step" data-step="3">
+    <rect x="244" y="262" width="212" height="80" rx="12" class="node node-rival"/>
+    <text x="350" y="293" class="n-kicker rival">RIVAL ROUTE</text>
+    <text x="350" y="318" class="n-label">An artifact that yields</text>
+    <text x="350" y="336" class="n-label">the same result</text>
+    <path d="M458 302 C 530 302, 565 240, 585 168" class="edge edge-rival" marker-end="url(#ap-audit-arrow-rival)"/>
+  </g>
+
+  <!-- residual claim -->
+  <g class="ap-step" data-step="5">
+    <rect x="610" y="262" width="330" height="80" rx="12" class="node node-residual"/>
+    <text x="775" y="293" class="n-kicker">5 · RESIDUAL CLAIM</text>
+    <text x="775" y="318" class="n-label">The strongest claim the evidence</text>
+    <text x="775" y="336" class="n-label">licenses once rival routes are excluded</text>
+    <path d="M847 164 L 847 258" class="edge" marker-end="url(#ap-audit-arrow)" color="var(--ink)"/>
+  </g>
+</svg></figure>
+    </div>
+    <ol class="audit-steps">
+      <li data-show-step="1" tabindex="0">
+        <p class="kicker">Step 1</p>
+        <h3>Target</h3>
+        <p>What relation does the claim assert: infection, cause, diagnosis, adaptation?</p>
+<p><a class="cref chip" href="/institute-of-perception/claims/11.1/">Claim 11.1</a></p>      </li>
+      <li data-show-step="2" tabindex="0">
+        <p class="kicker">Step 2</p>
+        <h3>Route</h3>
+        <p>Which instruments, samples and decisions stand between the target and the result?</p>
+<p><a class="cref chip" href="/institute-of-perception/claims/11.5/">Claim 11.5</a></p>      </li>
+      <li data-show-step="3" tabindex="0">
+        <p class="kicker">Step 3</p>
+        <h3>Product and rival route</h3>
+        <p>What did the chain actually stabilise, and could a named artifact have produced the same result? Replication counts only if it changes that dependency.</p>
+<p><a class="cref chip" href="/institute-of-perception/claims/11.3/">Claim 11.3</a></p>      </li>
+      <li data-show-step="4" tabindex="0">
+        <p class="kicker">Step 4</p>
+        <h3>The gap</h3>
+        <p>Where does the claim say more than the product shows? That step is where overinterpretation enters.</p>
+<p><a class="cref chip" href="/institute-of-perception/claims/11.1/">Claim 11.1</a></p>      </li>
+      <li data-show-step="5" tabindex="0">
+        <p class="kicker">Step 5</p>
+        <h3>Residual claim</h3>
+        <p>What is the strongest claim the evidence licenses once the rival routes are excluded? Evidential status does not travel automatically.</p>
+<p><a class="cref chip" href="/institute-of-perception/claims/11.2/">Claim 11.2</a></p>      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="kicker">Worked cases</p>
+    <h2>Where claims outran their access</h2>
+    <div class="cases">
+      <article class="case">
+        <p class="kicker">Virology</p>
+        <h3>XMRV and chronic fatigue syndrome</h3>
+        <p>A retrovirus was reported in patients&#39; blood and then found again by further tests. The repeated positives shared contamination routes through reagents and cell lines, so replication did not change the dependency that mattered. The audit reconstructs where the claim outran its access.</p>
+<p><a class="cref chip" href="/institute-of-perception/claims/11.9/">Claim 11.9</a></p>      </article>
+      <article class="case">
+        <p class="kicker">Medical AI</p>
+        <h3>AI that read the hospital, not the lungs</h3>
+        <p>Deep-learning models reported high accuracy for COVID-19 on chest radiographs. Tested outside their source datasets, several relied on shortcuts such as image markers and dataset origin rather than pathology. The output was real; the claim of detecting disease was not supported.</p>
+<p class="small">DeGrave, Janizek &amp; Lee (2021). AI for radiographic COVID-19 detection selects shortcuts over signal. Nature Machine Intelligence. <a href="https://doi.org/10.1038/s42256-021-00338-7">doi:10.1038/s42256-021-00338-7</a></p>      </article>
+      <article class="case">
+        <p class="kicker">Imaging</p>
+        <h3>What a microscope image can carry</h3>
+        <p>A fluorescence image is a reproducible product of labels, optics and processing. The audit records which part of a biological claim depends on each step, and which rival route could produce the same picture.</p>
+<p><a class="cref chip" href="/institute-of-perception/claims/11.7/">Claim 11.7</a></p>      </article>
+      <article class="case">
+        <p class="kicker">Cosmology</p>
+        <h3>Four claims under one name</h3>
+        <p>&#39;The Big Bang&#39; names several claims with different access paths and different warrant. Separating them shows which parts rest on measurement and which on model inference.</p>
+<p><a class="cref chip" href="/institute-of-perception/claims/11.12/">Claim 11.12</a></p>      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block sunk">
+  <div class="narrow">
+    <p class="kicker">The claims behind the method</p>
+    <h2>Thesis 11 in full</h2>
+    <div class="statement"><p class="label">The thesis</p><p>Error in empirical science enters at the step from what an access chain stabilized to the target relation a claim asserts. A claim-level audit locates that step, tests robustness against named artifact routes, and outputs the strongest residual claim the evidence licenses.</p></div>
+    <ul class="claim-list"><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.1/">11.1</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.1/">Target-artifact gap</a>
+    <span class="cls">Central thesis</span>
+    <p class="claim-stmt">A reproducible access product can stabilize an operational relation that differs from the target relation its claim asserts. Overinterpretation enters at the operational-to-target step, which statistical, risk-of-bias, metrological and…</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.2/">11.2</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.2/">Non-automatic claim-status inheritance and residual claims</a>
+    <span class="cls">Central thesis</span>
+    <p class="claim-stmt">Warrant does not pass automatically from a result to a transformed claim. Content reused for a different target, relation or strength needs its warrant re-established, and the audit outputs the strongest residual claim that survives.</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.3/">11.3</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.3/">Route-relative robustness and dependency-diverse support</a>
+    <span class="cls">Specific extension</span>
+    <p class="claim-stmt">Replication counts against a suspected artifact only when it changes, bounds or independently tests the dependency that artifact route runs through; replication along the same laboratory, reagent, cell line or pipeline reproduces the…</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.4/">11.4</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.4/">Stability under dataset swaps sets evidential status</a>
+    <span class="cls">Specific extension</span>
+    <p class="claim-stmt">The status of a cosmological model preference is set by its stability under swaps of dataset combination, calibration treatment and model assumptions, not by a sigma threshold borrowed from particle physics.</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.5/">11.5</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.5/">Access-path attribution grammar</a>
+    <span class="cls">Operationalisation</span>
+    <p class="claim-stmt">A measured difference is attributed to a target only after its access path is specified and compared with alternative paths; attribution is licensed where the target’s sensitivity direction lies outside the span of the path’s sensitivity…</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.6/">11.6</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.6/">Diagnostic Access Correction Framework (DACF)</a>
+    <span class="cls">Operationalisation</span>
+    <p class="claim-stmt">DACF audits a single empirical claim by separating what its access chain stabilized from the target relation the claim asserts, and ends every audit with a written corrected claim: stand, narrow, qualify or refuse.</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.7/">11.7</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.7/">Microscopy claim-dependency record</a>
+    <span class="cls">Operationalisation</span>
+    <p class="claim-stmt">The microscopy claim-dependency record rewrites an imaging conclusion into minimal propositions and passes each through two gates: whether the image operation is validated for its measurement task, and which biological proposition that…</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.8/">11.8</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.8/">Claim-level audit for sensory ecology</a>
+    <span class="cls">Operationalisation</span>
+    <p class="claim-stmt">The sensory-ecology claim audit codes each claim instance by biological target level, assertive force and evidence route, and outputs preserved, narrowed, out of scope or unsupported escalation, together with the residual claim the…</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.9/">11.9</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.9/">XMRV/ME-CFS worked reconstruction</a>
+    <span class="cls">Application</span>
+    <p class="claim-stmt">A DACF reconstruction of XMRV and ME/CFS keeps the operational history, that access chains produced XMRV-like signals more often in patient samples, and refuses the infection claim, because admissible contamination routes were never…</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.10/">11.10</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.10/">Route-aware reading of image-based profiling</a>
+    <span class="cls">Application</span>
+    <p class="claim-stmt">A route-aware reading of eleven image-based profiling studies supports perturbation-associated image variation, makes phenotype identity conditional on batch separation, and supports a unique target or mechanism only where a molecular or…</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.11/">11.11</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.11/">Claim-audit pilot results</a>
+    <span class="cls">Application</span>
+    <p class="claim-stmt">In a single-coder purposive pilot of 13 claim instances from 11 sensory-ecology papers, six were preserved, five narrowed and two routed out of scope. The narrowings fell at the step from sensory mechanism to behavioural or evolutionary…</p>
+  </div>
+</li><li class="claim-line">
+  <a class="claim-id cref" href="/institute-of-perception/claims/11.12/">11.12</a>
+  <div>
+    <a class="claim-title" href="/institute-of-perception/claims/11.12/">Four claims under one name: the Big Bang</a>
+    <span class="cls">Application</span>
+    <p class="claim-stmt">The name “Big Bang” bundles four claims of four warrant grades: the universe expands (observed), it was hot and dense (strong multi-route inference), there was a singularity (a model extended past its validity), and something came from…</p>
+  </div>
+</li></ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="narrow">
+    <h2>Use the audit</h2>
+    <p class="lede">We apply the audit with research groups, journals, and teams evaluating diagnostic or AI claims. If you have a result whose claim you want tested, write to us.</p>
+    <div class="actions"><a class="btn" href="/institute-of-perception/collaborate/">Work with us</a></div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="/institute-of-perception/"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="mark-band-f" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="var(--uv)"/>
+      <stop offset="1" stop-color="var(--cyan)"/>
+    </linearGradient>
+  </defs>
+  <path d="M3 20 C 11 8, 29 8, 37 20 C 29 32, 11 32, 3 20 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+  <circle cx="20" cy="20" r="7.2" fill="url(#mark-band-f)"/>
+  <rect x="18.6" y="12.8" width="2.8" height="14.4" rx="1.4" fill="var(--bg)"/>
+</svg><span class="brand-name">Institute of Perception</span></a>
+      <p>An independent research initiative operated by 3D Applications, Israel. Academic appointments held by its members are personal.</p>
+    </div>
+    <div>
+      <p><strong>Contact</strong><br><a href="mailto:razshmu@gmail.com">razshmu@gmail.com</a></p>
+      <p><strong>The record</strong><br>Claims are deposited in Harvard DASH. Where this site and a deposited register differ, the register governs.</p>
+    </div>
+    <div>
+      <p><a href="/institute-of-perception/research/">Research</a><br><a href="/institute-of-perception/access-path-audit/">The Audit</a><br><a href="/institute-of-perception/read/">Read</a><br><a href="/institute-of-perception/young-minds/">Young Minds</a><br><a href="/institute-of-perception/publications/">Publications</a><br><a href="/institute-of-perception/people/">People</a><br><a href="/institute-of-perception/collaborate/">Collaborate</a><br></p>
+    </div>
+  </div>
+</footer>
+<script src="/institute-of-perception/site.js" defer></script>
+</body>
+</html>
