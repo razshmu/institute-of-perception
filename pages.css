@@ -180,3 +180,9 @@ a.chip:hover { border-color: var(--uv); }
 .bridge { font-weight: 600; color: var(--accent); border-top: 1px solid var(--line); padding-top: .8rem; }
 .root-pubs li { font-size: .92rem; }
 @media (max-width: 900px) { .root-thread { grid-template-columns: 1fr; } }
+
+/* hero illustration (per-page artwork) */
+.hero-illustration { margin: 0 auto 1rem; }
+.hero-illustration img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 30px 60px -34px rgba(20,23,31,.6); }
+.hero-illustration figcaption { font: .95rem/1.55 var(--sans); color: var(--ink-2); margin: .9rem auto 0; max-width: 46rem; text-align: center; }
+.hero-illustration .credit { color: var(--muted); font-size: .82rem; }
