@@ -186,3 +186,18 @@ a.chip:hover { border-color: var(--uv); }
 .hero-illustration img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 30px 60px -34px rgba(20,23,31,.6); }
 .hero-illustration figcaption { font: .95rem/1.55 var(--sans); color: var(--ink-2); margin: .9rem auto 0; max-width: 46rem; text-align: center; }
 .hero-illustration .credit { color: var(--muted); font-size: .82rem; }
+
+.claim-more > summary { cursor: pointer; list-style: none; }
+.claim-more > summary::-webkit-details-marker { display: none; }
+.claim-more > summary::after { content: " +"; color: var(--accent); }
+.claim-more[open] > summary::after { content: " −"; }
+.claim-more > p { margin: .5rem 0 0; }
+.claim-line:target { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+
+/* Programme status labels and collapsed thesis lists */
+.status { display: inline-block; font: 600 .64rem/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); border: 1px solid currentColor; border-radius: 99px; padding: .25rem .5rem; margin-inline-start: .45rem; vertical-align: .12em; }
+.status.exploratory { color: var(--muted); border-style: dashed; }
+.line-card .body p.small { margin-top: .6rem; color: var(--muted); font-size: .92rem; }
+.theses-more { margin-top: 1.4rem; }
+.theses-more > summary { cursor: pointer; font: 600 .95rem var(--sans); color: var(--accent); }
+.theses-more[open] > summary { margin-bottom: 1rem; }

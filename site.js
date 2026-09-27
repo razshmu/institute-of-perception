@@ -98,3 +98,15 @@
     try { localStorage.setItem(key, human ? "1" : "0"); } catch (e) {}
   });
 })();
+
+// Open a collapsed claim when the page is reached through its anchor (#c1.2).
+(function () {
+  function openTarget() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var el = id && document.getElementById(id);
+    var d = el && el.querySelector("details");
+    if (d) { d.open = true; el.scrollIntoView(); }
+  }
+  window.addEventListener("hashchange", openTarget);
+  document.addEventListener("DOMContentLoaded", openTarget);
+})();
